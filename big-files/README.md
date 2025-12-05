@@ -18,6 +18,16 @@ It supports MP3, WAV, and M4A audio files up to **500MB**.
 
 ---
 
+## CHANGE YOUR PHP.IN TO
+
+- upload_max_filesize = 500M
+- post_max_size = 500M
+- memory_limit = 1024M
+- max_execution_time = 300
+- max_input_time = 300
+
+---
+
 ## 📦 Requirements
 
 - PHP 8+
@@ -34,3 +44,14 @@ It supports MP3, WAV, and M4A audio files up to **500MB**.
 ```sh
 git clone your-project-url
 cd your-project
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+php artisan storage:link
+php artisan serve
+[web](http://127.0.0.1:8000)
+
+---
+
+
