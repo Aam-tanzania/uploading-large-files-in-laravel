@@ -8,6 +8,13 @@ use App\Models\Song;
 
 class SongUploadController extends Controller
 {
+    public function index()
+    {
+        $songs = Song::latest()->get();
+        return view('index', compact('songs'));
+    }
+
+
     public function store(Request $request)
     {
         // Validate inputs

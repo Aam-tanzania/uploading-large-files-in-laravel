@@ -16,6 +16,8 @@
     <button type="submit">Upload Song</button>
 </form>
 
+<button><a href='{{route('admin.songs.index')}}'>View A list of all songs</a></button>
+
 @if(session('success'))
     <p style="color: green;">{{ session('success') }}</p>
 @endif
